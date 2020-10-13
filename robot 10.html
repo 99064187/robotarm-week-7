@@ -15,16 +15,17 @@
             var links=8
 
     for(i=1;i<=5;i++){
-            robotArm.grab();
+        robotArm.grab();
         for(l=1;l<=rechts;l++)
             robotArm.moveRight();
-            robotArm.drop();
+        
+        robotArm.drop();
         for(l=1;l<=links;l++)
             robotArm.moveLeft();
 
         rechts=rechts-2
         links=links-2
-}
+    }
 
             // De door jou opgegeven instructies uitvoeren
             robotArm.run();

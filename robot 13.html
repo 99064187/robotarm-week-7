@@ -11,28 +11,28 @@
             robotArm.randomLevel( 1, 8);
             
             // Jou instructies volgen hier
-          var AANTAL = 1
-            var R = 6
+          var getal = 1
+          var rechts = 6
 
-            for (j = 1 ; j <= R ; j++) {
+            for (j = 1 ; j <= rechts ; j++) {
 
                 robotArm.grab();
                 robotArm.scan();
 
                 if (robotArm.scan() != null) {
 
-                    for (i = 1 ; i <= AANTAL ; i++)
+                    for (i = 1 ; i <= getal ; i++)
                         robotArm.moveRight();
                         robotArm.drop();
 
-                    for (i = 1 ; i <= AANTAL ; i++)
+                    for (i = 1 ; i <= getal ; i++)
                         robotArm.moveLeft();
 
-                    AANTAL = AANTAL + 1
+                    getal = getal + 1
                 }
 
                 else {
-                    R = (R - 6)
+                    rechts = (rechts - 6)
                 }
             }
             // De door jou opgegeven instructies uitvoeren
